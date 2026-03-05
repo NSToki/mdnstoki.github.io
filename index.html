@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toki — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="#hero" class="logo"><span class="logo-dot"></span>TOKI</a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Teach Toki</button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <h1 class="hero-name">TOKI<span>CREATES.</span></h1>
+      <p class="hero-sub">Full-stack designer &amp; developer. Toki turns bold ideas into digital experiences that feel alive — interfaces people actually remember.</p>
+      <div class="hero-actions">
+        
+        <a href="#contact" class="btn-outline">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div>Scroll to explore</div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-label reveal">About Toki</div>
+    <div class="about-grid">
+      <div>
+        <h2 class="about-title reveal">TOKI<br/>BUILDS<br/><em>DIFFERENT.</em></h2>
+        <p class="about-text reveal reveal-delay-1">Hey — I'm <strong>Toki</strong>, a creative developer and UI/UX designer obsessed with the intersection of aesthetics and engineering. Toki believes great design isn't just how something looks — it's how it works, feels, and moves.</p>
+        <p class="about-text reveal reveal-delay-2">With 5+ years shipping products, Toki has worked with startups, agencies, and global brands across fintech, SaaS, and creative industries — always with the same obsessive attention to detail.</p>
+        <div class="about-stats reveal reveal-delay-3">
+          <div><div class="stat-num">5<sup>+</sup></div><div class="stat-label">Years Experience</div></div>
+          <div><div class="stat-num">40<sup>+</sup></div><div class="stat-label">Projects Shipped</div></div>
+          <div><div class="stat-num">28<sup>+</sup></div><div class="stat-label">Happy Clients</div></div>
+          <div><div class="stat-num">5</div><div class="stat-label">Certification</div></div>
+        </div>
+      </div>
+      <div class="about-img reveal reveal-delay-2">
+        <div >
+            <img class="about-img-box" src="assets/IMG_20250429_103502.jpg" alt="" srcset="">
+        </div>
+        <div class="about-img-badge">Toki<br/>Dev &amp; Design</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+   <!---
+  <section id="projects">
+    <div class="projects-header">
+      <div class="section-label reveal">Toki's Selected Work</div>
+      <h2 class="section-title reveal">TOKI'S<br/><em>PROJECTS.</em></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card featured reveal">
+        <div class="project-num">01 / FEATURED</div>
+        <div class="project-visual"><div class="project-visual-text">VAULT</div></div>
+        <span class="project-tag">Fintech</span>
+        <h3 class="project-title">VAULT — Digital Banking Platform</h3>
+        <p class="project-desc">Toki designed and built a full-stack banking dashboard for a Series-A fintech startup. Real-time transaction analytics, biometric auth flows, and a design system serving 80k+ users daily.</p>
+        <div class="project-tech">
+          <span class="tech-pill">React</span><span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Figma</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Stripe</span>
+        </div>
+        <a href="#" class="project-link">View Case Study <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">02</div>
+        <div class="project-visual"><div class="project-visual-text">FLORA</div></div>
+        <span class="project-tag orange">E-Commerce</span>
+        <h3 class="project-title">FLORA — Luxury Brand Site</h3>
+        <p class="project-desc">Toki crafted a bespoke e-commerce experience for a luxury plant brand. 3D product viewers, scroll storytelling, 40% conversion uplift post-launch.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Next.js</span><span class="tech-pill">Three.js</span><span class="tech-pill">GSAP</span>
+        </div>
+        <a href="#" class="project-link">View Case Study <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-num">03</div>
+        <div class="project-visual"><div class="project-visual-text">GRID</div></div>
+        <span class="project-tag light">SaaS</span>
+        <h3 class="project-title">GRID — Analytics Dashboard</h3>
+        <p class="project-desc">Toki built a real-time analytics platform for marketing teams. Complex data visualised simply, with a dark-first design system and pixel-perfect chart components.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Vue.js</span><span class="tech-pill">D3.js</span><span class="tech-pill">Supabase</span>
+        </div>
+        <a href="#" class="project-link">View Case Study <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">04</div>
+        <div class="project-visual"><div class="project-visual-text">MODO</div></div>
+        <span class="project-tag">Mobile</span>
+        <h3 class="project-title">MODO — Habit Tracker</h3>
+        <p class="project-desc">Toki designed the full UX and motion system for a habit-tracking mobile app. 4.9★ App Store rating, 200k+ downloads in the first quarter.</p>
+        <div class="project-tech">
+          <span class="tech-pill">React Native</span><span class="tech-pill">Lottie</span><span class="tech-pill">Figma</span>
+        </div>
+        <a href="#" class="project-link">View Case Study <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">05</div>
+        <div class="project-visual"><div class="project-visual-text">WAVE</div></div>
+        <span class="project-tag orange">Creative</span>
+        <h3 class="project-title">WAVE — Music Platform</h3>
+        <p class="project-desc">Toki built an immersive streaming experience with audio-reactive WebGL visuals and a bespoke player UI that responds to BPM in real-time.</p>
+        <div class="project-tech">
+          <span class="tech-pill">WebGL</span><span class="tech-pill">Web Audio API</span><span class="tech-pill">GSAP</span>
+        </div>
+        <a href="#" class="project-link">View Case Study <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-num">06</div>
+        <div class="project-visual"><div class="project-visual-text">FOLD</div></div>
+        <span class="project-tag light">Agency</span>
+        <h3 class="project-title">FOLD — Creative Agency Site</h3>
+        <p class="project-desc">Toki led design and dev for a boutique agency's award-winning portfolio site. CSS Award winner 2025, with a perfect 97/100 Lighthouse score.</p>
+        <div class="project-tech">
+          <span class="tech-pill">HTML/CSS</span><span class="tech-pill">GSAP</span><span class="tech-pill">Webflow</span>
+        </div>
+        <a href="#" class="project-link">View Case Study <span>→</span></a>
+      </div>
+
+    </div>
+  </section>
+    --->
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="skills-inner">
+      <div class="section-label reveal">What Toki Does</div>
+      <h2 class="section-title reveal">SKILLS &amp;<br/><em>TOOLS.</em></h2>
+      <div class="skills-grid">
+        <div class="skill-item reveal"><div class="skill-icon">⬡</div><div class="skill-name">React / Next.js</div><div class="skill-level">Intermediate · 2yr</div><div class="skill-bar"><div class="skill-fill" data-w=".70"></div></div></div>
+        <div class="skill-item reveal reveal-delay-1"><div class="skill-icon">◈</div><div class="skill-name">Java</div><div class="skill-level">Expert · 5yr</div><div class="skill-bar"><div class="skill-fill" data-w=".95"></div></div></div>
+        <div class="skill-item reveal reveal-delay-2"><div class="skill-icon">△</div><div class="skill-name">C Sharp</div><div class="skill-level">Expert · 5yr</div><div class="skill-bar"><div class="skill-fill" data-w=".93"></div></div></div>
+        <div class="skill-item reveal reveal-delay-3"><div class="skill-icon">◎</div><div class="skill-name">Node.js</div><div class="skill-level">Advanced · 4yr</div><div class="skill-bar"><div class="skill-fill" data-w=".85"></div></div></div>
+        <div class="skill-item reveal"><div class="skill-icon">◇</div><div class="skill-name">MySQL/mongo db</div><div class="skill-level">Advanced · 3yr</div><div class="skill-bar"><div class="skill-fill" data-w=".88"></div></div></div>
+        <div class="skill-item reveal reveal-delay-1"><div class="skill-icon">⬢</div><div class="skill-name">TypeScript</div><div class="skill-level">Intermediate · 2yr</div><div class="skill-bar"><div class="skill-fill" data-w=".65"></div></div></div>
+        <div class="skill-item reveal reveal-delay-2"><div class="skill-icon">□</div><div class="skill-name">Docker</div><div class="skill-level">Intermediate · 2yr</div><div class="skill-bar"><div class="skill-fill" data-w=".65"></div></div></div>
+        <div class="skill-item reveal reveal-delay-3"><div class="skill-icon">○</div><div class="skill-name">Python / Django</div><div class="skill-level">Intermediate · 2yr</div><div class="skill-bar"><div class="skill-fill" data-w=".65"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS ── -->
+  <section id="process">
+    <div class="section-label reveal">How Toki Works</div>
+    <h2 class="section-title reveal">TOKI'S<br/><em>PROCESS.</em></h2>
+    <div class="process-steps">
+      <div class="process-step reveal"><div class="step-num">01</div><div class="step-title">DISCOVER</div><div class="step-desc">Toki digs deep into your goals, users, and competitive landscape before a single pixel is placed.</div></div>
+      <div class="process-step reveal reveal-delay-1"><div class="step-num">02</div><div class="step-title">DESIGN</div><div class="step-desc">High-fidelity Figma prototypes with real interactions. You see exactly what Toki will build before dev begins.</div></div>
+      <div class="process-step reveal reveal-delay-2"><div class="step-num">03</div><div class="step-title">BUILD</div><div class="step-desc">Clean, documented, production-ready code. Toki ships fast without cutting corners on quality or performance.</div></div>
+      <div class="process-step reveal reveal-delay-3"><div class="step-num">04</div><div class="step-title">LAUNCH</div><div class="step-desc">Deployment, QA, and post-launch support. Toki stays on until your product is live and performing beautifully.</div></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="contact-title reveal">LET'S<br/>WORK<br/><em>TOGETHER.</em></h2>
+        <p class="contact-text reveal reveal-delay-1">Have a project in mind? Toki would love to hear about it. Reach out and let's create something extraordinary.</p>
+        <div class="contact-links reveal reveal-delay-2">
+          <a href="mailto:mdnstoki@gmail.com" class="contact-link"><div class="contact-link-icon">✉</div>mdnstoki</a>
+          <a href="https://www.linkedin.com/in/nstoki/" class="contact-link"><div class="contact-link-icon">in</div>LinkedIn</a>
+          <a href="https://github.com/NSToki" class="contact-link"><div class="contact-link-icon">gh</div>GitHub</a>
+          <a href="https://x.com/mdnstoki" class="contact-link"><div class="contact-link-icon">𝕏</div>mdnstoki</a>
+          <a href="https://www.facebook.com/mdnstoki" class="contact-link"><div class="contact-link-icon">fb</div>Nazmus Salehin Toki</a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form">
+          <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" placeholder="Jane Smith"/></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="jane@company.com"/></div>
+          <div class="form-group"><label class="form-label">Project Type</label><input class="form-input" type="text" placeholder="Web App, Brand Site, Mobile..."/></div>
+          <div class="form-group"><label class="form-label">Tell Toki About Your Project</label><textarea class="form-textarea" placeholder="Share your vision, timeline, and budget..."></textarea></div>
+          <button class="form-submit">Send to Toki →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-logo">TOKI</div>
+    <div class="footer-copy">© 2026 Toki · All rights reserved</div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    const ring   = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top  = my + 'px';
+    });
+    (function loop() {
+      rx += (mx - rx) * .12; ry += (my - ry) * .12;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a, button, .project-card, .skill-item, .process-step').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.style.width = '18px'; cursor.style.height = '18px'; ring.style.width = '58px'; ring.style.height = '58px'; });
+      el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '38px'; ring.style.height = '38px'; });
+    });
+
+    // Hamburger
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open'); });
+    mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); mob.classList.remove('open'); }));
+
+    // Scroll reveal + skill bars
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          e.target.querySelectorAll('.skill-fill').forEach(b => { b.style.transform = `scaleX(${b.dataset.w})`; });
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const skillObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const bar = e.target.querySelector('.skill-fill');
+          if (bar) bar.style.transform = `scaleX(${bar.dataset.w})`;
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.skill-item').forEach(el => skillObs.observe(el));
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const links    = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+      document.getElementById('navbar').style.boxShadow = window.scrollY > 10 ? '0 1px 40px rgba(0,0,0,.6)' : 'none';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
